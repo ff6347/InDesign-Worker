@@ -1,0 +1,8 @@
+INDESIGN WORKFLOW SCRIPTING
+
+Modular scripts for workflow automation in Adobe InDesign, written above its JavaScript Scripting API as in the CS3 version of the environment.
+
+
+INSTALLATION
+
+The scripts are installed by linking the desired top-level JSX files in the Scripts Panel folder whithin user's specific InDesign folders.
