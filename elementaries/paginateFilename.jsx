@@ -13,11 +13,18 @@ function paginateFilename (doc) {
 	}
 	
 	var pageNo = parseInt(doc.pages.firstItem().name);
-		
-	var URI = prefixNumber(pageNo) + "_" + doc.name.replace(/\.indd$/i, ".pdf");
+	var newFilename = prefixNumber(pageNo) + "_" + doc.name;
+	var oldURI = doc.fullName;
+	var newURI = oldURI.path + "/" + newFilename;
+	var isVisible = doc.visible;
+	
+	doc.close();
 	
 	try {
-		doc.save(File(URI));
+		
+		File(oldURI).rename(newFilename);
+		app.open(File(newURI), isVisible);
+		
 	} catch (error) {
 		alert(error.description);
 

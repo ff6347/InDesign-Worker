@@ -1,7 +1,4 @@
 
-#include "../utilities/prefixNumber.jsx";
-
-
 function exportPDF (doc, path, preset) {
 	
 	// only the documents, not the templates
@@ -24,9 +21,7 @@ function exportPDF (doc, path, preset) {
 	// export all pages
 	app.pdfExportPreferences.pageRange = PageRange.ALL_PAGES;
 	
-	var pageNo = doc.pages.firstItem().name;
-	
-	var URI = doc.fullName.path + "/" + path + "/" + prefixNumber(pageNo) + "_" + doc.name.replace(/\.indd$/i, ".pdf");
+	var URI = doc.fullName.path + "/" + path + "/" + doc.name.replace(/\.indd$/i, ".pdf");
 	
 	try {
 		doc.exportFile(ExportFormat.PDF_TYPE, File(URI), false, preset);
