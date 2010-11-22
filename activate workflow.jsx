@@ -9,6 +9,8 @@
 #include "elementaries/checkOutStories.jsx"
 #include "elementaries/checkInStories.jsx"
 #include "elementaries/createAssignment.jsx"
+#include "elementaries/exportStories.jsx"
+#include "elementaries/updateStories.jsx"
 
 
 app.eventListeners.add("afterOpen", afterOpen, false);
@@ -27,6 +29,9 @@ function afterSaveAs (event) {
 	
 	var doc = event.target;
 	createAssignment(doc, "ASSIGNMENTS");
+	updateAssignments(doc);
+	exportStories(doc, "ASSIGNMENTS/INCX");
+	updateStories(doc);
 	
 }
 
