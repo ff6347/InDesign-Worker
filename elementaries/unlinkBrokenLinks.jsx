@@ -4,21 +4,15 @@ function unlinkBrokenLinks (doc) {
 	var links = doc.links;
 	var linksCount = links.count();
 	
-	var toUnlink = new Array();
-	
-	for (var l = 0; l < linksCount; l++) {
+	// loop in reverse, because links being unlinked are removed from collection
+	for (var l = linksCount - 1; l >= 0; l--) {
 		
 		var link = links.item(l);
 		
 		if (link.status == LinkStatus.LINK_MISSING) {
-			toUnlink.push(link);
+			link.unlink();
 		}
 		
-	}
-	
-	for (var u = 0; u < toUnlink.length; u++) {
-		toUnlink[u].unlink();
-		//alert(toUnlink[u].status  == LinkStatus.LINK_MISSING);
 	}
 	
 }

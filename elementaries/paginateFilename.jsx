@@ -21,21 +21,12 @@ function paginateFilename (doc) {
 	doc.close();
 	
 	try {
-		
+
 		File(oldURI).rename(newFilename);
 		app.open(File(newURI), isVisible);
-		
+
 	} catch (error) {
 		alert(error.description);
-
-		/* amazingly, this does not work
-		if (doc.fullName.parent.create(path)) {
-			doc.exportFile(ExportFormat.PDF_TYPE, File(URI));
-		} else {
-			alert("Can't create the " + path + " folder");
-		}
-		*/
-		
 	}
 
 }

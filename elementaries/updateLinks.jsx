@@ -5,8 +5,10 @@ function updateLinks (doc) {
 	if (doc.name.search(/\.indd$/i) == -1) return;
 	
 	var links = doc.links;
+	var linksCount = links.count();
 	
-	for (var l = 0; l < links.count(); l++) {
+	// loop in reverse, because links when updated are kinda readded to collection, thus moved to bottom
+	for (var l = linksCount - 1; l >= 0; l--) {
 		
 		var link = links.item(l);
 		
