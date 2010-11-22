@@ -1,4 +1,7 @@
 
+#include "../utilities/removeSpecialCharacters.jsx";
+
+
 function exportRTF (doc, path) {
 	
 	// only the documents, not the templates
@@ -18,7 +21,7 @@ function exportRTF (doc, path) {
 		
 		var story = stories.item(s);
 		
-		// continue, becouse it's probably junk or fairly unimportant story
+		// continue, because it's probably junk or fairly unimportant story
 		if (story.length < 6 && story.tables.count() == 0) continue;
 
 		var suffix = "";
@@ -31,14 +34,8 @@ function exportRTF (doc, path) {
 			if (doc.name.search(suffix) >= 0) suffix = "";
 		}
 	
-		// get rid of special characters
-		var index = 0;
-		while (index < suffix.length) {
-			if (suffix.charCodeAt(index) < 32) 
-				suffix = suffix.split(suffix.charAt(index)).join("")
-			else 
-				index++;
-		}
+		// get rid of suffix's special characters
+		suffix = removeSpecialCharacters(suffix);
 		
 		// construct URI
 		var URI = doc.fullName.path + "/" + path + "/" + doc.name.replace(/\.indd$/i, "") + (suffix.length > 0 ? "_" + suffix : "") + ".rtf";
