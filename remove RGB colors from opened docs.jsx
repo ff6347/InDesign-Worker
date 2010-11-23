@@ -1,5 +1,5 @@
 
-#include "elementaries/removeRGBColors.jsx"
+#include "Document/removeRGBColors.jsx"
 
 
 var replaceWith = "Black";

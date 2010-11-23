@@ -1,5 +1,5 @@
 
-#include "elementaries/exportPDF.jsx"
+#include "Document/exportPDF.jsx"
 
 
 var path = "PDF"; // must be created manually

@@ -3,14 +3,14 @@
 #strict on
 #script "activate workflow"
 
-#include "elementaries/exportPDF.jsx"
-#include "elementaries/updateLinks.jsx"
-#include "elementaries/updateAssignments.jsx"
-#include "elementaries/checkOutStories.jsx"
-#include "elementaries/checkInStories.jsx"
-#include "elementaries/createAssignment.jsx"
-#include "elementaries/exportStories.jsx"
-#include "elementaries/updateStories.jsx"
+#include "Document/exportPDF.jsx"
+#include "Document/updateLinks.jsx"
+#include "Document/updateAssignments.jsx"
+#include "Document/checkOutStories.jsx"
+#include "Document/checkInStories.jsx"
+#include "Document/createAssignment.jsx"
+#include "Document/exportStories.jsx"
+#include "Document/updateStories.jsx"
 
 
 app.eventListeners.add("afterOpen", afterOpen, false);

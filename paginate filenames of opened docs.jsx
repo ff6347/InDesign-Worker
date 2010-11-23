@@ -1,5 +1,5 @@
 
-#include "elementaries/paginateFilename.jsx"
+#include "Document/paginateFilename.jsx"
 
 
 var docs =  app.documents;

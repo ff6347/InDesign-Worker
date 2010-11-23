@@ -1,5 +1,5 @@
 
-#include "elementaries/exportJPG.jsx";
+#include "Document/exportJPG.jsx";
 
 
 var path = "JPG"; // must be created manually

@@ -1,6 +1,6 @@
 
-#include "elementaries/removeAssignments.jsx"
-#include "elementaries/unlinkStories.jsx"
+#include "Document/removeAssignments.jsx"
+#include "Document/unlinkStories.jsx"
 
 
 var docs =  app.documents;

@@ -1,6 +1,6 @@
 
-#include "elementaries/updateAssignments.jsx"
-#include "elementaries/updateStories.jsx"
+#include "Document/updateAssignments.jsx"
+#include "Document/updateStories.jsx"
 
 
 var docs =  app.documents;

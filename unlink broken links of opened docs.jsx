@@ -1,5 +1,5 @@
 
-#include "elementaries/unlinkBrokenLinks.jsx"
+#include "Document/unlinkBrokenLinks.jsx"
 
 
 var docs =  app.documents;

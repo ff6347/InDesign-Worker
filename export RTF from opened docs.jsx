@@ -1,5 +1,5 @@
 
-#include "elementaries/exportRTF.jsx"
+#include "Document/exportRTF.jsx"
 
 
 var path = "RTF"; // must be created manually

@@ -1,8 +1,8 @@
 
-#include "elementaries/createAssignment.jsx"
-#include "elementaries/updateAssignments.jsx"
-#include "elementaries/exportStories.jsx"
-#include "elementaries/updateStories.jsx"
+#include "Document/createAssignment.jsx"
+#include "Document/updateAssignments.jsx"
+#include "Document/exportStories.jsx"
+#include "Document/updateStories.jsx"
 
 
 var path = "ASSIGNMENTS";

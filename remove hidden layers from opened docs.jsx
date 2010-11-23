@@ -1,5 +1,5 @@
 
-#include "elementaries/removeHiddenLayers.jsx"
+#include "Document/removeHiddenLayers.jsx"
 
 
 var docs =  app.documents;
