@@ -1,5 +1,6 @@
 
 #include "../utilities/removeSpecialCharacters.jsx";
+#include "../PageItem/isPlacedOnMasterSpread.jsx";
 
 
 function exportStories (doc, path) {
@@ -19,10 +20,12 @@ function exportStories (doc, path) {
 	
 		var story = stories.item(s);
 
+		// continue if story's first text frame is on master spread
+		var originContainer = story.textContainers[0];
+		if (isPlacedOnMasterSpread(originContainer)) continue;
+
 		// continue, because it's probably junk or fairly unimportant story
 		if (story.length < 6 && story.tables.count() == 0) continue;
-		
-		// if (story.textFrames.firstItem().parent instanceof MasterSpread) continue;
 		
 		var suffix = "";
 		if (story.length < 6 && story.tables.count() > 0) 

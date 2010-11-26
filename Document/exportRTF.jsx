@@ -1,5 +1,6 @@
 
 #include "../utilities/removeSpecialCharacters.jsx";
+#include "../PageItem/isPlacedOnMasterSpread.jsx";
 
 
 function exportRTF (doc, path) {
@@ -20,6 +21,10 @@ function exportRTF (doc, path) {
 	for (var s = 0; s < storiesCount; s++) {
 		
 		var story = stories.item(s);
+
+		// continue if story's first text frame is on master spread
+		var originContainer = story.textContainers[0];
+		if (isPlacedOnMasterSpread(originContainer)) continue;
 		
 		// continue, because it's probably junk or fairly unimportant story
 		if (story.length < 6 && story.tables.count() == 0) continue;
