@@ -1,8 +1,6 @@
 
-var book = app.activeBook;
-var docs = book.bookContents;
+#include "Book/openContentsQuietly.jsx"
 
-for (var d=0; d < docs.count(); d++) {
-	var doc = docs.item(d);
-	app.open(File(doc.fullName), false);
-}
+
+var book = app.activeBook;
+openContentsQuietly(book);
