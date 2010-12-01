@@ -9,16 +9,16 @@ function exportJPG (doc, path, resolution, spreads) {
 	if (isTemplate(doc)) return;
 	
 	if (!doc.saved) {
-		alert("Can't export JPG for never being saved document.");
+		alert("Can't export JPG for never being saved document: " + doc.name);
 		return;
 	}
-	
+
 	app.jpegExportPreferences.jpegExportRange = ExportRangeOrAllPages.EXPORT_RANGE;
 	app.jpegExportPreferences.resolution = resolution;
 	app.jpegExportPreferences.exportingSpread = spreads;
 	app.jpegExportPreferences.jpegQuality = JPEGOptionsQuality.MAXIMUM;
 	app.jpegExportPreferences.jpegRenderingStyle = JPEGOptionsFormat.PROGRESSIVE_ENCODING;
-	
+
 	var pagesCount = doc.pages.count();
 	
 	for (var p = 0; p < pagesCount; p++) {

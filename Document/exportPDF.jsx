@@ -8,7 +8,7 @@ function exportPDF (doc, path, preset) {
 	if (isTemplate(doc)) return;
 	
 	if (!doc.saved) {
-		alert("Can't export PDF for never being saved document.");
+		alert("Can't export PDF for never being saved document: " + doc.name);
 		return;
 	}
 	

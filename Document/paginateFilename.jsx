@@ -9,7 +9,7 @@ function paginateFilename (doc) {
 	if (isTemplate(doc)) return;
 	
 	if (!doc.saved) {
-		alert("Can't paginate filename for never being saved document.");
+		alert("Can't paginate filename for never being saved document: " + doc.name);
 		return;
 	}
 	

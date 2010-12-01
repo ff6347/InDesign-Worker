@@ -1,4 +1,4 @@
-	
+
 #include "isTemplate.jsx";
 
 
@@ -8,7 +8,7 @@ function createAssignment (doc, path) {
 	if (isTemplate(doc)) return;
 	
 	if (!doc.saved) {
-		alert("Can't create assignments for never being saved document.");
+		alert("Can't create assignments for never being saved document: " + doc.name);
 		return;
 	}
 	

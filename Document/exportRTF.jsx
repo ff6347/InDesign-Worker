@@ -10,7 +10,7 @@ function exportRTF (doc, path) {
 	if (isTemplate(doc)) return;
 	
 	if (!doc.saved) {
-		alert("Can't export RTF for never being saved document.");
+		alert("Can't export RTF for never being saved document: " + doc.name);
 		return;
 	}
 	
