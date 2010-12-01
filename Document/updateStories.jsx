@@ -1,8 +1,11 @@
 
+#include "isTemplate.jsx";
+
+
 function updateStories (doc) {
 
-	// check only the documents, not the templates
-	if (doc.name.search(/\.indd$/i) == -1) return;
+	// give up the templates
+	if (isTemplate(doc)) return;
 	
 	var assignments = doc.assignments;
 	

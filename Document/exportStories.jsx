@@ -1,12 +1,13 @@
 
 #include "../utilities/removeSpecialCharacters.jsx";
 #include "../PageItem/isPlacedOnMasterSpread.jsx";
+#include "isTemplate.jsx";
 
 
 function exportStories (doc, path) {
 	
-	// only the documents, not the templates
-	if (doc.name.search(/\.indd$/i) == -1) return;
+	// give up the templates
+	if (isTemplate(doc)) return;
 	
 	if (!doc.saved) {
 		alert("Can't export stories for never being saved document.");
