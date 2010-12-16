@@ -3,11 +3,11 @@
 
 
 var docs =  app.documents;
-var docCount = docs.count();
+var lastDoc = docs.count() - 1;
 
-for (var d = 0; d < docCount; d++) {
+for (var d = lastDoc; d >= 0; d--) {
 
-	var doc = docs.item(d);
+	var doc = docs.item(lastDoc);
 	paginateFilename(doc);
 
 }

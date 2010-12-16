@@ -14,7 +14,13 @@ function paginateFilename (doc) {
 	}
 	
 	var pageNo = parseInt(doc.pages.firstItem().name);
-	var newFilename = prefixNumber(pageNo) + "_" + doc.name;
+	var pagination = prefixNumber(pageNo) + "_";
+	
+	// check if filename is already paginated
+	if (doc.name.search(pagination) == 0) 
+		return;
+
+	var newFilename = pagination + doc.name;
 	var oldURI = doc.fullName;
 	var newURI = oldURI.path + "/" + newFilename;
 	var isVisible = doc.visible;
@@ -28,6 +34,8 @@ function paginateFilename (doc) {
 
 	} catch (error) {
 		alert(error.description);
+		app.open(File(oldURI), isVisible);
+		
 	}
 
 }
