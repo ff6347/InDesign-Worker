@@ -1,6 +1,9 @@
 
 function openContentsQuietly (book) {
 	
+	// if no book given, use the frontmost
+	if (!book) book = app.activeBook;
+	
 	var docs = book.bookContents;
 	var docsCount = docs.count();
 	

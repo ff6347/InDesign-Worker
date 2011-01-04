@@ -4,6 +4,9 @@
 
 function exportPDF (doc, path, preset) {
 	
+	// if no document given, use the frontmost
+	if (!doc) doc = app.activeDocument;
+	
 	// give up the templates
 	if (isTemplate(doc)) return;
 	

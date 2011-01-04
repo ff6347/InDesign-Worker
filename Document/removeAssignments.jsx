@@ -1,6 +1,9 @@
 
 function removeAssignments (doc) {
 	
+	// if no document given, use the frontmost
+	if (!doc) doc = app.activeDocument;
+	
 	var assignments = doc.assignments;
 	var assignmentsCount = assignments.count();
 	

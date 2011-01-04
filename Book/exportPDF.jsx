@@ -4,6 +4,9 @@
 
 function exportPDF (book, path, preset) {
 	
+	// if no book given, use the frontmost
+	if (!book) book = app.activeBook;
+	
 	// check the existence of given preset
 	preset = app.pdfExportPresets.itemByName(preset);
 	try {
