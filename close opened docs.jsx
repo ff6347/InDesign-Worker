@@ -1,9 +1,5 @@
 
-var docs = app.documents;
+#include "Application/closeDocuments.jsx";
 
-while (docs.count() > 0) {
-	
-	var doc = docs.firstItem();
-	doc.close(SaveOptions.YES);
-	
-}
+
+closeDocuments();
