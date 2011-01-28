@@ -1,4 +1,7 @@
 
+#include "isTemplate.jsx";
+
+
 function unlinkBrokenLinks (doc) {
 	
 	// if no document given, use the frontmost
