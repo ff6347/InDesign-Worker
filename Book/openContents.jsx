@@ -1,5 +1,5 @@
 
-function openContentsQuietly (book) {
+function openContents (book, quietly) {
 	
 	// if no book given, use the frontmost
 	if (!book) book = app.activeBook;
@@ -9,7 +9,7 @@ function openContentsQuietly (book) {
 	
 	for (var d=0; d < docsCount; d++) {
 		var doc = docs.item(d);
-		app.open(File(doc.fullName), false);
+		app.open(File(doc.fullName), !quietly);
 	}
 
 }

@@ -1,6 +1,6 @@
 
-#include "Book/openContentsQuietly.jsx"
+#include "Book/openContents.jsx"
 
 
 var book = app.activeBook;
-openContentsQuietly(book);
+openContents(book, true);
