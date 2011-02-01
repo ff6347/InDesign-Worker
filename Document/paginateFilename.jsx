@@ -21,7 +21,7 @@ function paginateFilename (doc) {
 	
 	// check if filename is already paginated
 	if (doc.name.search(pagination) == 0) 
-		return;
+		return doc;
 
 	var newFilename = pagination + doc.name;
 	var oldURI = doc.fullName;
@@ -33,12 +33,14 @@ function paginateFilename (doc) {
 	try {
 
 		File(oldURI).rename(newFilename);
-		app.open(File(newURI), isVisible);
+		doc = app.open(File(newURI), isVisible);
 
 	} catch (error) {
 		alert(error.description);
-		app.open(File(oldURI), isVisible);
+		doc = app.open(File(oldURI), isVisible);
 		
 	}
+	
+	return doc;
 
 }
