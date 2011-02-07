@@ -1,6 +1,6 @@
-INDESIGN WORKFLOW SCRIPTING
+INDESIGN WORKER
 
-Modular scripts for workflow automation in Adobe InDesign, written above its JavaScript Scripting API as in the CS3 version of the environment.
+High-level, workflow oriented API wrapper for task automation in Adobe InDesign, written above its JavaScript Scripting API as in the CS3 version of the environment.
 
 
 INSTALLATION
