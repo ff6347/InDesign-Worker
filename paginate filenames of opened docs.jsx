@@ -1,4 +1,4 @@
-
+﻿
 #include "Document/paginateFilename.jsx"
 
 
@@ -7,7 +7,7 @@ var lastDoc = docs.count() - 1;
 
 for (var d = lastDoc; d >= 0; d--) {
 
-	var doc = docs.item(lastDoc);
+	var doc = docs.item(d);
 	paginateFilename(doc);
 
 }
