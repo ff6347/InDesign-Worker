@@ -16,8 +16,9 @@ function paginateFilename (doc) {
 		return;
 	}
 	
-	var pageNo = parseInt(doc.pages.firstItem().name);
-	var pagination = prefixNumber(pageNo) + "_";
+	var firstPageName = doc.pages.firstItem().name;
+
+	var pagination = (isNaN(parseInt(firstPageName)) ? firstPageName : prefixNumber(firstPageName)) + "_";
 	
 	// check if filename is already paginated
 	if (doc.name.search(pagination) == 0) 

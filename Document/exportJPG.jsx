@@ -28,9 +28,11 @@ function exportJPG (doc, path, resolution, spreads) {
 		
 		var page = doc.pages.item(p);
 					
-		app.jpegExportPreferences.pageString = page.name;
+		app.jpegExportPreferences.pageString = ((page.appliedSection.name.length > 0) ? page.appliedSection.name : "") + page.name;
 		
-		var fileURI = doc.fullName.path + "/" + path +"/" + prefixNumber(page.name) + "_" + doc.name.replace(/\.indd$/i, ".jpg");
+		var pagination = isNaN(parseInt(page.name)) ? page.name : prefixNumber(page.name);
+		
+		var fileURI = doc.fullName.path + "/" + path +"/" + pagination + "_" + doc.name.replace(/\.indd$/i, ".jpg");
 		
 		try {
 			doc.exportFile(ExportFormat.JPG, File(fileURI));
